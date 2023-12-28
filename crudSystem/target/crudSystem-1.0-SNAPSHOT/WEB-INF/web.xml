@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+
+    <!--    connections-->
+
+    <servlet>
+        <servlet-name>Assignment</servlet-name>
+        <servlet-class>org.example.crudsystem.RegistrationForm</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SuccessServlet</servlet-name>
+        <servlet-class>org.example.crudsystem.SuccessServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeniedServlet</servlet-name>
+        <servlet-class>org.example.crudsystem.DeniedServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>org.example.crudsystem.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>updateProfile</servlet-name>
+        <servlet-class>org.example.crudsystem.UpdateProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>deleteProfile</servlet-name>
+        <servlet-class>org.example.crudsystem.DeleteProfileServlet</servlet-class>
+    </servlet>
+
+    <!--    urls-->
+    <servlet-mapping>
+        <servlet-name>deleteProfile</servlet-name>
+        <url-pattern>/deleteProfile</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>updateProfile</servlet-name>
+        <url-pattern>/updateProfile</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SuccessServlet</servlet-name>
+        <url-pattern>/SuccessServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeniedServlet</servlet-name>
+        <url-pattern>/DeniedServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Assignment</servlet-name>
+        <url-pattern>/projectAssignmentForm</url-pattern>
+    </servlet-mapping>
+</web-app>
