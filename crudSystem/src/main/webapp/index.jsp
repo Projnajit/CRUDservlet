@@ -27,7 +27,7 @@
 
 <body>
 <div>
-    <form action="projectAssignmentForm" method="post" id="form1">
+    <form action="projectAssignmentForm" method="post" enctype="multipart/form-data">
         <table>
             <th id="formHead">Project Registration Form</th>
             <tr>
@@ -64,6 +64,11 @@
                         <option value="Hardware">Hardware</option>
                     </select>
                 </td>
+            </tr>
+
+            <tr>
+                <td><label for="image">Upload image:</label></td>
+                <td><input type="file" name="image" id="image"></td>
             </tr>
 
             <tr>

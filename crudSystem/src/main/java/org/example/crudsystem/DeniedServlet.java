@@ -15,7 +15,6 @@ public class DeniedServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 
-        out.println("ashchee.....");
 
         req.getRequestDispatcher("index.jsp").include(req,resp);
         req.getRequestDispatcher("/pages/denied.jsp").forward(req,resp);

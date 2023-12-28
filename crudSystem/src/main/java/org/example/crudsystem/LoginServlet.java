@@ -52,6 +52,8 @@ public class LoginServlet extends HttpServlet {
                 req.setAttribute("retrivedDesignation",rest.getString("designation"));
                 req.setAttribute("retrivedGender",rest.getString("gender"));
                 req.setAttribute("retrivedProjectType",rest.getString("projectType"));
+                req.setAttribute("retrivedImageName",rest.getString("imageName"));
+
 
                 req.getRequestDispatcher("/pages/updateDelete.jsp").forward(req,resp);
 

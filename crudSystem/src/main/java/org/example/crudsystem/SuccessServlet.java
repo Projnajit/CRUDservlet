@@ -20,8 +20,11 @@ public class SuccessServlet extends HttpServlet {
         req.setAttribute("email",req.getParameter("email"));
         req.setAttribute("projectType",req.getParameter("projectType"));
 
+        String imageFile=(String) req.getAttribute("imageFile");
+        req.setAttribute("imageFile",imageFile);
+
+        System.out.println(imageFile);
 
         req.getRequestDispatcher("/pages/success.jsp").forward(req,resp);
-
     }
 }
