@@ -19,6 +19,20 @@
         height: 250px;
         margin-top: 20px;
     }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-2
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 <body>
 
@@ -26,11 +40,16 @@
 <%
     String imageFile=(String)request.getAttribute("imageFile");
 %>
+<div class="container">
+    <h1>Congratulations, <span id="name">${name}</span>!!</h1>
+    <img id="profile-image" src="images/<%=imageFile%>" alt="">
+    <h3>Email: ${email}</h3>
+    <p>Happy to assigned you to the <span id="project">${projectType}</span> project.</p>
+</div>
 
-<h1>Congratulations, <span id="name">${name}</span>!!</h1>
-<img id="profile-image" src="images/<%=imageFile%>" alt="">
-<h3>Email: ${email}</h3>
-<p>Happy to assigned you to the <span id="project">${projectType}</span> project.</p>
-<jsp:include page="LoginPage.jsp"/>
+<br>
+<div class="container-2">
+    <jsp:include page="LoginPage.jsp"/>
+</div>
 </body>
 </html>

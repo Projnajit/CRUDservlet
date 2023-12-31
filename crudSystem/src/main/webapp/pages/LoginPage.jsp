@@ -7,7 +7,7 @@
 <body>
 <form action="loginServlet" method="post" id="form1">
     <table>
-        <th>Login Form:</th>
+        <th>Login Here:</th>
         <tr>
             <td><label for="id">Id</label></td>
             <td><input type="text" name="id" id="id"></td>
